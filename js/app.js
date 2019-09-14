@@ -3,6 +3,9 @@
     $('.cart-count').text(localStorage.length);
 
     var productObj = {};
+    var accessoryOneObj = {};
+    var accessoryTwoObj = {};
+    var insuranceObj = {};
 
     var productJSON = {
         "products": [
@@ -55,7 +58,6 @@
     var tplString = tpl(productJSON);
     $('#products').html(tplString);
 
-
     var $filters = $('.filter [data-filter]'),
         $boxes = $('#products [data-cat]');
 
@@ -106,8 +108,8 @@
         var isDateValid = isTimeValid = false;
 
         if (form[0].checkValidity() === false) {
-            event.preventDefault()
-            event.stopPropagation()
+            event.preventDefault();
+            event.stopPropagation();
         }
 
         $('.invalid-feedback, .valid-feedback').hide();
@@ -139,31 +141,49 @@
             }
         }
 
-
         if(isDateValid && isTimeValid) {
             productObj.id = $('#bikeId').val();
             productObj.name = $('#bikeName').val();
             productObj.image = $('#bikeImage').val();
-            productObj.accessoryOne = $('#accessory-1').is(':checked') ? $('#accessory-1').val() : "";
-            productObj.accessoryOnePrice = $('#accessory-1').is(':checked') ? "4" : "";
-            productObj.accessoryTwo = $('#accessory-2').is(':checked') ? $('#accessory-2').val() : "";
-            productObj.accessoryTwoPrice = $('#accessory-2').is(':checked') ? "3.50" : "";
-            productObj.insurance = $('#insurance').is(':checked') ? $('#insurance').val() : "";
-            productObj.insurancePrice = $('#insurance').is(':checked') ? "9.99" : "";
             productObj.price = $('#bikePrice').val();
             productObj.selectedDate = selectedDate;
             productObj.selectedTime = selectedTime;
 
             localStorage.setItem(productObj.id, JSON.stringify(productObj));
 
+            if($('#accessory-1').is(':checked')) {
+                accessoryOneObj.accessoryOneId = $('#accessory-1').is(':checked') ? "4" : "";
+                accessoryOneObj.accessoryOne = $('#accessory-1').is(':checked') ? $('#accessory-1').val() : "";
+                accessoryOneObj.accessoryOnePrice = $('#accessory-1').is(':checked') ? "4.00" : "";
+                accessoryOneObj.accessoryOneImage = $('#accessory-1').is(':checked') ? "img/kids_unisex_helmet.jpeg" : "";
+
+                localStorage.setItem(accessoryOneObj.accessoryOneId, JSON.stringify(accessoryOneObj));
+            }
+
+            if($('#accessory-2').is(':checked')) {
+                accessoryTwoObj.accessoryTwoId = $('#accessory-2').is(':checked') ? "5" : "";
+                accessoryTwoObj.accessoryTwo = $('#accessory-2').is(':checked') ? $('#accessory-2').val() : "";
+                accessoryTwoObj.accessoryTwoPrice = $('#accessory-2').is(':checked') ? "3.50" : "";
+                accessoryTwoObj.accessoryTwoImage = $('#accessory-2').is(':checked') ? "img/adult_unisex_helmet.jpeg" : "";
+
+                localStorage.setItem(accessoryTwoObj.accessoryTwoId, JSON.stringify(accessoryTwoObj));
+            }
+
+            if($('#insurance').is(':checked')) {
+                insuranceObj.insuranceId = $('#insurance').is(':checked') ? "6" : "";
+                insuranceObj.insurance = $('#insurance').is(':checked') ? $('#insurance').val() : "";
+                insuranceObj.insurancePrice = $('#insurance').is(':checked') ? "9.99" : "";
+                insuranceObj.insuranceImage = $('#insurance').is(':checked') ? "img/protection_plan.jpeg" : "";
+
+                localStorage.setItem(insuranceObj.insuranceId, JSON.stringify(insuranceObj));
+            }
+
             setTimeout(function() {
                 $('.cart-count').val(localStorage.length);
                 $('#myModal').modal('toggle');
                 window.location.reload();
             }, 2000);
-
         }
-
     });
 
     $('#chooseDate').focusin(function() {

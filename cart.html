@@ -1,171 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>TopView® New York City Tours</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <nav class="top-menu navbar navbar-expand-md navbar-dark fixed-top bg-white no-gutters">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="https://www.topviewnyc.com/content/distribution/assets/img/topview_color.svg" alt="" style="height: 32px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
+
+<head>
+    <title>TopView® New York City Tours</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <nav class="top-menu navbar navbar-expand-md navbar-dark fixed-top bg-white no-gutters">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://www.topviewnyc.com/content/distribution/assets/img/topview_color.svg" alt=""
+                    style="height: 32px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
                     <i class="fa fa-navicon"></i>
                 </span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Bikes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Electric Bikes</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-dark" href="#">Rentals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <a class="btn btn-info btn-danger btn-sm ml-0" href="cart.html">
-                            <i class="fa fa-shopping-cart"></i> Cart
-                            <span class="badge badge-light cart-count">0</span>
-                        </a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <div class="row no-gutters">
-                <h2>&nbsp;</h2>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Bikes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Electric Bikes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="#">Rentals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-info btn-danger btn-sm ml-0" href="cart.html">
+                        <i class="fa fa-shopping-cart"></i> Cart
+                        <span class="badge badge-light cart-count">0</span>
+                    </a>
+                </form>
             </div>
         </div>
-        <div class="container mb-3 p-3" style="background-color: #f6f7fa">
-            <div class="card">
-                <div class="card-header text-light" style="background-color: #222d68">
-                    <b>Your bike rental order</b>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">First Name</label>
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="John">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword4">Last Name</label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="Smith">
-                            </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row no-gutters">
+            <h2>&nbsp;</h2>
+        </div>
+    </div>
+    <div class="container mb-3 p-3" style="background-color: #f6f7fa">
+        <div class="card">
+            <div class="card-header text-light" style="background-color: #222d68">
+                <b>Your bike rental order</b>
+                <div class="clearfix"></div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">First Name</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="John">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="name@domain.com">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword4">Phone Number (optional)</label>
-                                <input type="text" class="form-control" id="inputPassword4"
-                                    placeholder="(XXX) - XXX - XXXX">
-                            </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Last Name</label>
+                            <input type="text" class="form-control" id="inputPassword4" placeholder="Smith">
                         </div>
-                        <button type="submit" class="btn btn-danger">Proceed to Checkout</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="name@domain.com">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Phone Number (optional)</label>
+                            <input type="text" class="form-control" id="inputPassword4"
+                                placeholder="(XXX) - XXX - XXXX">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Proceed to Checkout</button>
+                </form>
             </div>
         </div>
-        <script type="text/template" class="shopping-list-template">
-            <%
+    </div>
+    <script type="text/template" class="shopping-list-template">
+            <%  
+                console.log(cartItems);
                 _.each(cartItems, function(item) {
             %>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6 col-sm-3 col-md-3 col-lg-4 pl-3 pr-0 pl-sm-1">
-                        <img class="img-responsive" src="<%- item.image %>" style="height:80px;width:120px" alt="prewiew">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <img class="img-responsive" src="<%- item.image %>" style="height:80px;width:120px" alt="bike">
                     </div>
-                    <div class="col-6 col-sm-4 col-md-4 col-lg-4 text-lg-left">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
                         <h6 class=""><strong><%- item.name %></strong></h6>
-                        <h6 class=""><strong><%- item.accessoryOne %></strong></h6>
-                        <h6 class=""><strong><%- item.accessoryTwo %></strong></h6>
-                        <h6 class=""><strong><%- item.insurance %></strong></h6>
+                        <h6 class=""><strong>($<%- item.price %> each)</strong></h6>
                     </div>
-                    <div class="col-12 col-sm-5 col-md-5 col-lg-4 mt-md-0 mt-lg-0 mt-sm-0 mt-3 p-sm-0">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
                         <div class="row">
-                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 text-lg-right text-right p-0 mt-sm-2 mt-2">
-                                <h6><strong>$<%- item.price %> <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div
-                                class="col-4 col-sm-5 col-md-4 col-lg-4 p-lg-0 p-md-0 ml-lg-1 mr-lg-1 ml-md-1 mr-md-1 p-sm-0 ml-sm-1 mr-sm-1">
-                                <input type="text" class="form-control input-sm" value="1">
-                            </div>
-                            <div class="col-4 col-sm-2 col-md-2 col-lg-2 p-sm-0">
-                                <button type="button" class="btn btn-outline-danger btn-xs" data-product-id="<%- item.id %>" id="btnRemoveItem">
+                            <div class="col-6 p-0 pr-1">
+                                <input type="number" class="form-control input-sm" value="1" min="1">
+                            </div> 
+                            <div class="col-6 p-0">
+                                <button type="button" class="btn btn-outline-danger btn-xs btnRemoveItem" data-product-id="<%- item.id %>" id="btnRemoveItem">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </button>
-                            </div>
-                        </div>
+                            </div>    
+                        </div> 
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-right">
+                        <h6><strong>$<%- item.price %></strong></h6>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-12 col-sm-6">
-                        <b>Selected Date:</b> <%- item.selectedDate %>
+                <hr />
+                <% if(item.accessoryOne !== "") { %>
+                <div class="row">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <img class="img-responsive" src="<%- item.accessoryOneImage %>" style="height:80px;width:120px" alt="Accessory One Image">
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <b>Selected Time:</b> <%- item.selectedTime %>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <h6 class=""><strong><%- item.accessoryOne %></strong></h6>
+                        <h6 class=""><strong>($<%- item.accessoryOnePrice %> each)</strong></h6>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <div class="row">
+                            <div class="col-6 p-0 pr-1">
+                                <input type="number" class="form-control input-sm" value="1" min="1">
+                            </div> 
+                            <div class="col-6 p-0">
+                                <button type="button" class="btn btn-outline-danger btn-xs btnRemoveItem" data-product-id="<%- item.accessoryOneId %>" id="btnRemoveItem">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>    
+                        </div> 
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-right">
+                        <h6><strong>$<%- item.accessoryOnePrice %></strong></h6>
                     </div>
                 </div>
+                <hr />
+                <% } %>
+                <% if(item.accessoryTwo !== "") { %>
+                <div class="row">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <img class="img-responsive" src="<%- item.accessoryTwoImage %>" style="height:80px;width:120px" alt="Accessory Two Image">
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <h6 class=""><strong><%- item.accessoryTwo %></strong></h6>
+                        <h6 class=""><strong>($<%- item.accessoryTwoPrice %> each)</strong></h6>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <div class="row">
+                            <div class="col-6 p-0 pr-1">
+                                <input type="number" class="form-control input-sm" value="1" min="1">
+                            </div> 
+                            <div class="col-6 p-0">
+                                <button type="button" class="btn btn-outline-danger btn-xs btnRemoveItem" data-product-id="<%- item.accessoryTwoId %>" id="btnRemoveItem">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>    
+                        </div> 
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-right">
+                        <h6><strong>$<%- item.accessoryTwoPrice %></strong></h6>
+                    </div>
+                </div>
+                <hr />
+                <% } %>
+                <% if(item.insurance !== "") { %>
+                <div class="row">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <img class="img-responsive" src="<%- item.insuranceImage %>" style="height:80px;width:120px" alt="Insurance Image">
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <h6 class=""><strong><%- item.insurance %></strong></h6>
+                        <h6 class=""><strong>($<%- item.insurancePrice %> each)</strong></h6>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
+                        <div class="row">
+                            <div class="col-6 p-0 pr-1">
+                                <input type="number" class="form-control input-sm" value="1" min="1">
+                            </div> 
+                            <div class="col-6 p-0">
+                                <button type="button" class="btn btn-outline-danger btn-xs btnRemoveItem" data-product-id="<%- item.insuranceId %>" id="btnRemoveItem">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>    
+                        </div> 
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-right">
+                        <h6><strong>$<%- item.insurancePrice %></strong></h6>
+                    </div>
+                </div>
+                <hr />
+                <% } %>
+                
             </div>
-            <hr>
             <%
                 })
             %>
         </script>
-        <div class="container mb-5 p-3" style="background-color: #f6f7fa">
-            <div class="card">
-                <div class="card-header text-light" style="background-color: #222d68">
-                    <b>Shopping cart</b>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="card-body" id="cartItems"></div>
-                <div class="card-footer">
-                    <div class="pull-right" style="margin: 5px">
-                        Total: <span class="total"><b>$0.00</b></span>
-                    </div>
+    <div class="container mb-5 p-3" style="background-color: #f6f7fa">
+        <div class="card">
+            <div class="card-header text-light" style="background-color: #222d68">
+                <b>Shopping cart</b>
+                <div class="clearfix"></div>
+            </div>
+            <div class="card-body" id="cartItems"></div>
+            <div class="card-footer">
+                <div class="pull-right" style="margin: 5px">
+                    <b>Total: </b><span class="total"><b>$0.00</b></span>
                 </div>
             </div>
         </div>
+    </div>
+
+    <footer class="footer bg-dark1 fixed-bottom1 mb-0">
         <div class="container">
             <div class="row no-gutters">
-                <br /><br />
-            </div>
-        </div>
-        <footer class="footer bg-dark1 fixed-bottom1 mb-0">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-xs-12 col-sm-12 text-center">
-                        <div class="copyright"><small>© Copyright 2019 TopView Sightseeing<sup>®</sup></small></div>
-                    </div>
+                <div class="col-xs-12 col-sm-12 text-center">
+                    <div class="copyright"><small>© Copyright 2019 TopView Sightseeing<sup>®</sup></small></div>
                 </div>
             </div>
-        </footer>
-        <script src="js/cart.js"></script>
-    </body>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+
 </html>

@@ -20,9 +20,9 @@
 
     $('.total').html('<b>$'+total+'</b>');
 
-    $("#btnRemoveItem").click(function (e) {
-        event.preventDefault();        
-        localStorage.removeItem($(event.currentTarget).data('product-id'));
+    $(".btnRemoveItem").click(function (e) {
+        e.preventDefault();        
+        localStorage.removeItem($(e.currentTarget).data('product-id'));
         window.location.reload();
     });
 
