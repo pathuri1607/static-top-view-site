@@ -100,11 +100,17 @@
             <%  
                 console.log(cartItems);
                 _.each(cartItems, function(item) {
+                    console.log("item := ", item);
+                    console.log("accessoryOne := ", item.accessoryOne);
+                    console.log("accessoryTwo := ", item.accessoryTwo);
+                    console.log("insurance := ", item.insurance);
+
             %>
             <div class="container-fluid">
+                <% if(item.name !== undefined) { %>
                 <div class="row">
                     <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
-                        <img class="img-responsive" src="<%- item.image %>" style="height:80px;width:120px" alt="bike">
+                        <img class="img-responsive" src="<%- item.image %>" style="height:80px;width:120px" alt="product image">
                     </div>
                     <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
                         <h6 class=""><strong><%- item.name %></strong></h6>
@@ -126,8 +132,9 @@
                         <h6><strong>$<%- item.price %></strong></h6>
                     </div>
                 </div>
+                <% } %>
                 <hr />
-                <% if(item.accessoryOne !== "") { %>
+                <% if(item.accessoryOne !== undefined) { %>
                 <div class="row">
                     <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
                         <img class="img-responsive" src="<%- item.accessoryOneImage %>" style="height:80px;width:120px" alt="Accessory One Image">
@@ -154,7 +161,7 @@
                 </div>
                 <hr />
                 <% } %>
-                <% if(item.accessoryTwo !== "") { %>
+                <% if(item.accessoryTwo !== undefined) { %>
                 <div class="row">
                     <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
                         <img class="img-responsive" src="<%- item.accessoryTwoImage %>" style="height:80px;width:120px" alt="Accessory Two Image">
@@ -181,7 +188,7 @@
                 </div>
                 <hr />
                 <% } %>
-                <% if(item.insurance !== "") { %>
+                <% if(item.insurance !== undefined) { %>
                 <div class="row">
                     <div class="col-6 col-sm-3 col-md-3 col-lg-3 text-lg-left">
                         <img class="img-responsive" src="<%- item.insuranceImage %>" style="height:80px;width:120px" alt="Insurance Image">
