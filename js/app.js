@@ -1,9 +1,7 @@
 (function ($, window, document) {
 
-    sessionStorage.setItem("cartCount", 0);
-
-    //$('.cart-count').text(sessionStorage.length);
-
+    //$('.cart-count').text(sessionStorage.getItem("cartItems"));
+    
     var productJSON = {
         "products": [
             {
@@ -107,6 +105,7 @@
             accessoryTwo: {},
             insurance: {}
         };
+        var cartItems = 0;
         var form = $("#bookNowForm");
         var isDateValid = isTimeValid = false;
 
@@ -152,14 +151,16 @@
             productObj["product"].selectedDate = selectedDate;
             productObj["product"].selectedTime = selectedTime;
             
-            sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+            //sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+            ++cartItems;
 
             if($('#accessory-1').is(':checked')) {
                 productObj["accessoryOne"].id = $('#accessory-1').is(':checked') ? "4" : "";
                 productObj["accessoryOne"].name = $('#accessory-1').is(':checked') ? $('#accessory-1').val() : "";
                 productObj["accessoryOne"].price = $('#accessory-1').is(':checked') ? "4.00" : "";
                 productObj["accessoryOne"].image = $('#accessory-1').is(':checked') ? "img/kids_unisex_helmet.jpeg" : "";
-                sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+                //sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+                ++cartItems;
             }
 
             if($('#accessory-2').is(':checked')) {
@@ -167,7 +168,8 @@
                 productObj["accessoryTwo"].name = $('#accessory-2').is(':checked') ? $('#accessory-2').val() : "";
                 productObj["accessoryTwo"].price = $('#accessory-2').is(':checked') ? "3.50" : "";
                 productObj["accessoryTwo"].image = $('#accessory-2').is(':checked') ? "img/adult_unisex_helmet.jpeg" : "";
-                sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+                //sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+                ++cartItems;
             }
 
             if($('#insurance').is(':checked')) {
@@ -175,13 +177,13 @@
                 productObj["insurance"].name = $('#insurance').is(':checked') ? $('#insurance').val() : "";
                 productObj["insurance"].price = $('#insurance').is(':checked') ? "9.99" : "";
                 productObj["insurance"].image = $('#insurance').is(':checked') ? "img/protection_plan.jpeg" : "";
-                sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+                //sessionStorage.setItem("cartCount", sessionStorage.getItem("cartCount") + 1);
+                ++cartItems;
             }
             sessionStorage.setItem(productObj.product.id, JSON.stringify(productObj));
-            //console.log("productObj := ", productObj);
 
             setTimeout(function() {
-                $('.cart-count').val(sessionStorage.getItem("cartCount"));
+                //$('.cart-count').text(sessionStorage.getItem("cartItems"));
                 $('#myModal').modal('toggle');
                 window.location.reload();
             }, 2000);
