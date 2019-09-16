@@ -1,7 +1,8 @@
 (function ($, window, document) {
-    console.log("checkout...");
+    //console.log("checkout...");
 
-    //$('.cart-count').text(sessionStorage.length);
+    var cartCount = (sessionStorage.length == 0) ? 0 : sessionStorage.length - 1;
+    $('.cart-count').text(cartCount);
     var total = 0;
 
     var cartJSON = {
@@ -11,7 +12,7 @@
     for (var i = 0, len = sessionStorage.length; i < len; ++i) {
         var cartKey = sessionStorage.key(i);
         var cartItem = JSON.parse(sessionStorage.getItem(cartKey));
-        console.log(cartItem);
+        //console.log(cartItem);
 
         if(cartItem.product && Object.keys(cartItem.product).length !== 0) {
             total += +cartItem.product.price;
@@ -41,7 +42,10 @@
 
     $('.total').html('<b>$'+total+'</b>');
 
-    $('.cartTotal b').text($('#cartItems .cartItem').length);
+    $('.cartTotal b').text(cartCount);
+    //$('.cartTotal b').text($('#cartItems .cartItem').length);
+    //$('.cart-count').text($('#cartItems .cartItem').length);
+    
 
     $(".btnRemoveItem").click(function (e) {
         e.preventDefault();        

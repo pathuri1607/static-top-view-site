@@ -1,6 +1,7 @@
 (function ($, window, document) {
 
-    //$('.cart-count').text(sessionStorage.getItem("cartItems"));
+    var cartCount = (sessionStorage.length == 0) ? 0 : sessionStorage.length - 1;
+    $('.cart-count').text(cartCount);
     
     var productJSON = {
         "products": [
@@ -181,11 +182,12 @@
                 ++cartItems;
             }
             sessionStorage.setItem(productObj.product.id, JSON.stringify(productObj));
+            var cartCount = sessionStorage.length - 1;
+            $('.cart-count').text(cartCount);
 
             setTimeout(function() {
-                //$('.cart-count').text(sessionStorage.getItem("cartItems"));
                 $('#myModal').modal('toggle');
-                window.location.reload();
+                //window.location.reload();
             }, 2000);
         }
     });

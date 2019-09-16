@@ -1,6 +1,7 @@
 (function ($, window, document) {
 
-    //$('.cart-count').text(sessionStorage.length);
+    var cartCount = (sessionStorage.length == 0) ? 0 : sessionStorage.length - 1;
+    $('.cart-count').text(cartCount);
     var total = 0;
 
     var cartJSON = {
