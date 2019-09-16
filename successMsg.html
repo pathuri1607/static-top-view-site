@@ -70,12 +70,12 @@
                 <!-- <div class="container"> -->
                 <div class="row">
                     <div class="col-12 mt-2">
-                        <h6 class="mb-3 thanyou">Hi John,</h6>
+                        <h6 class="mb-3 fullName">Hi ,</h6>
                         <h4 class="mb-3 thanyou">Thank you for your order!</h4>
                         <h5 class="ordernumber">Order number is:
-                            <b>308512033</b>
+                            <b class="myordernumber">308512033</b>
                         </h5>
-                        <span class="ordermessage">You will receive an email confirmation shortly at info@topviewsiteseeing.com</span>
+                        <span class="ordermessage">You will receive an email confirmation shortly at info@topviewsightseeing.com</span>
                     </div>
                 </div>
                 <div class="row p-3">
@@ -103,6 +103,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        $('.fullName').text('Hi ' + sessionStorage.getItem('fullName') + ",");
+        $('.myordernumber').text(Math.floor(Math.random() * 2000000000));
+    </script>
 </body>
 
 </html>

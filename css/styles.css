@@ -161,6 +161,7 @@
 
 .checkout .container {
     background-color: #f2f2f2;
+    /* background-color: #ffffff; */
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
@@ -196,9 +197,9 @@
     font-size: 25px;
 }
 
-.checkout .checkoutBtn:hover {
+/* .checkout .checkoutBtn:hover {
     background-color: #45a049;
-}
+} */
 
 /* .checkout a {
   color: #2196F3;
@@ -253,4 +254,9 @@ hr {
   	border: 3px solid green;
 	padding: 10px;
 
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-weight: 700;
 }

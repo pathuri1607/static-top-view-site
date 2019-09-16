@@ -78,69 +78,74 @@
         <div class="row">
             <div class="col-75">
                 <div class="container">
-                    <form action="/action_page.php">
-                        <div class="row">
-                            <div class="col-50 mt-2">
-                                <h3 class="mb-3">Billing Address</h3>
-                                <label for="fname">
-                                    <i class="fa fa-user"></i> Full Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                                <label for="email">
-                                    <i class="fa fa-envelope"></i> Email</label>
-                                <input type="text" id="email" name="email" placeholder="john@example.com">
-                                <label for="adr">
-                                    <i class="fa fa-address-card-o"></i> Address</label>
-                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                                <label for="city">
-                                    <i class="fa fa-institution"></i> City</label>
-                                <input type="text" id="city" name="city" placeholder="New York">
+                    <div class="row">
+                        <div class="col-50 mt-2">
+                            <h3 class="mb-3">Billing Address</h3>
+                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                            <input type="text" class="m-0" id="fname" name="firstname" placeholder="Ex: John M. Doe">
+                            <div class="invalid-feedback fname">Enter valid full name please.</div>
+                            <label for="email" class="mt-4"><i class="fa fa-envelope"></i> Email</label>
+                            <input type="text" class="m-0" id="email" name="email" placeholder="Ex: john@example.com">
+                            <div class="invalid-feedback email">Enter valid email please.</div>
+                            <label for="adr" class="mt-4"><i class="fa fa-address-card-o"></i> Address</label>
+                            <input type="text" class="m-0" id="adr" name="address" placeholder="Ex: 542 W. 15th Street">
+                            <div class="invalid-feedback adr">Enter valid address please.</div>
+                            <label for="city" class="mt-4"><i class="fa fa-institution"></i> City</label>
+                            <input type="text" class="m-0" id="city" name="city" placeholder="Ex: New York">
+                            <div class="invalid-feedback city">Enter valid city please.</div>
 
-                                <div class="row">
-                                    <div class="col-50">
-                                        <label for="state">State</label>
-                                        <input type="text" id="state" name="state" placeholder="NY">
-                                    </div>
-                                    <div class="col-50">
-                                        <label for="zip">Zip</label>
-                                        <input type="text" id="zip" name="zip" placeholder="10001">
-                                    </div>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state" class="mt-4">State</label>
+                                    <input type="text" class="m-0" id="state" name="state" placeholder="Ex: NY">
+                                    <div class="invalid-feedback state">Enter valid state please.</div>
                                 </div>
-                                <hr>
-                                <h3>Payment</h3>
-                                <label for="fname">Accepted Cards</label>
-                                <div class="icon-container">
-                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                <div class="col-50">
+                                    <label for="zip" class="mt-4">Zip</label>
+                                    <input type="text" class="m-0" id="zip" name="zip" placeholder="Ex: 10001">
+                                    <div class="invalid-feedback zip">Enter valid zip please.</div>
                                 </div>
-                                <label for="cname">Name on Card</label>
-                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                                <label for="ccnum">Credit card number</label>
-                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                                <label for="expmonth">Exp Month</label>
-                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
-                                <div class="row">
-                                    <div class="col-50">
-                                        <label for="expyear">Exp Year</label>
-                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
-                                    </div>
-                                    <div class="col-50">
-                                        <label for="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" placeholder="352">
-                                    </div>
+                            </div>
+                            <hr>
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname" class="mt-4">Name on Card</label>
+                            <input type="text" class="m-0" id="cname" name="cardname" placeholder="Ex: John More Doe">
+                            <div class="invalid-feedback cname">Enter valid name on card please.</div>
+                            <label for="ccnum" class="mt-4">Credit card number</label>
+                            <input type="text" class="m-0" id="ccnum" name="cardnumber" placeholder="Ex: 1111-2222-3333-4444">
+                            <div class="invalid-feedback ccnum">Enter valid card number please.</div>
+                            <label for="expmonth" class="mt-4">Exp Month</label>
+                            <input type="text" class="m-0" id="expmonth" name="expmonth" placeholder="Ex: September">
+                            <div class="invalid-feedback expmonth">Enter valid expire month please.</div>
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear" class="mt-4">Exp Year</label>
+                                    <input type="text" class="m-0" id="expyear" name="expyear" placeholder="Ex: 2018">
+                                    <div class="invalid-feedback expyear">Enter valid expire year please.</div>
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv" class="mt-4">CVV</label>
+                                    <input type="text" class="m-0" id="cvv" name="cvv" placeholder="Ex: 352">
+                                    <div class="invalid-feedback cvv">Enter valid cvv please.</div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <label>
-                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                        </label>
-                        <!-- <input type="submit" value="Place your order" class="btn btn-danger checkoutBtn"> -->
-                        <a href="successMsg.html" class="btn btn-danger checkoutBtn p-3">
-                            <b>Place your order</b>
-                        </a>
-                    </form>
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameadr" class="mt-4"> Shipping address same as billing
+                    </label>
+                    <!-- <input type="submit" value="Place your order" class="btn btn-danger checkoutBtn"> -->
+                    <button class="btn btn-danger checkoutBtn p-3" id="orderplace" type="button">
+                        <b>Place your order</b>
+                    </button>
                 </div>
             </div>
             <div class="col-25">
