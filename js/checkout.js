@@ -41,7 +41,7 @@
 
     $('.total').html('<b>$'+total+'</b>');
 
-    $('.cartTotal').text($('#cartItems .cartItem').length);
+    $('.cartTotal b').text($('#cartItems .cartItem').length);
 
     $(".btnRemoveItem").click(function (e) {
         e.preventDefault();        
