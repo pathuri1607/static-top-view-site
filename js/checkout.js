@@ -33,7 +33,6 @@
         }
     }
     //console.log(cartJSON);
-    debugger;
     total = total.toFixed(2);
     var tpl = _.template($('.shopping-list-template').html());
     var tplString = tpl(cartJSON);
@@ -45,7 +44,6 @@
     $('.cartTotal b').text(cartCount);
     //$('.cartTotal b').text($('#cartItems .cartItem').length);
     //$('.cart-count').text($('#cartItems .cartItem').length);
-    
 
     $(".btnRemoveItem").click(function (e) {
         e.preventDefault();        
