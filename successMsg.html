@@ -1,78 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>TopView® New York City Tours</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <nav class="top-menu navbar navbar-expand-md navbar-dark fixed-top bg-white no-gutters">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="https://www.topviewnyc.com/content/distribution/assets/img/topview_color.svg" alt="" style="height: 32px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
+
+<head>
+    <title>TopView® New York City Tours</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="checkout confirmation">
+    <nav class="top-menu navbar navbar-expand-md navbar-dark fixed-top bg-white no-gutters">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://www.topviewnyc.com/content/distribution/assets/img/topview_color.svg" alt="" style="height: 32px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
                     <i class="fa fa-navicon"></i>
                 </span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Bikes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Electric Bikes</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-dark" href="#">Rentals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <a class="btn btn-info btn-danger btn-sm ml-0" href="cart.html">
-                            <i class="fa fa-shopping-cart"></i> Cart
-                            <span class="badge badge-light cart-count">0</span>
-                        </a>
-                    </form>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Bikes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Electric Bikes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="#">Rentals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-info btn-danger btn-sm ml-0" href="cart.html">
+                        <i class="fa fa-shopping-cart"></i> Cart
+                        <span class="badge badge-light cart-count">0</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container-fluid mt-5">
+        <div class="row no-gutters">
+            <!-- <h1 class="mt-1 ml-2">Order Confirmed</h1> -->
+            <h1 class="mt-1 ml-2">&nbsp;</h1>
+        </div>
+        <!-- <hr> -->
+    </div>
+
+    <div class="container-fluid mb-5 p-4 order-confirm-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <!-- <div class="container"> -->
+                <div class="row">
+                    <div class="col-12 mt-2">
+                        <h6 class="mb-3 thanyou">Hi John,</h6>
+                        <h4 class="mb-3 thanyou">Thank you for your order!</h4>
+                        <h5 class="ordernumber">Order number is:
+                            <b>308512033</b>
+                        </h5>
+                        <span class="ordermessage">You will receive an email confirmation shortly at info@topviewsiteseeing.com</span>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <div class="row no-gutters">
-                <h2>&nbsp;</h2>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="row no-gutters">
-                <br /><br />
+                <div class="row p-3">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 mt-2 p-0">
+                        <a href="index.html" class="btn btn-xs btn-danger checkoutBtn p-3 mr-5 mb-2 mt-2 w-100" style="font-size: 20px;">
+                            <b>Continue shopping</b>
+                        </a>
+                    </div>
+                </div>
+                <!-- </div> -->
             </div>
         </div>
-        <footer class="footer bg-dark1 fixed-bottom1 mb-0">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-xs-12 col-sm-12 text-center">
-                        <div class="copyright"><small>© Copyright 2019 TopView Sightseeing<sup>®</sup></small></div>
+    </div>
+
+    <footer class="footer bg-dark1 fixed-bottom1 mb-0">
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-xs-12 col-sm-12 text-center">
+                    <div class="copyright">
+                        <small>© Copyright 2019 TopView Sightseeing
+                            <sup>®</sup>
+                        </small>
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="js/cart.js"></script>
-    </body>
+        </div>
+    </footer>
+</body>
+
 </html>
